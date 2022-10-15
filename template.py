@@ -24,13 +24,13 @@ list_of_files =[ ".github/workflows/.gitkeep",
                  f"tests/__init__.py",
                  f"tests/unit/__init__.py",
                  f"tests/integration/__init__.py",
-                 "init_setup.sh", # basic environ set up
-                 "requirements.txt", # Production requirement txt
-                 "requirements_dev.txt", # developer and Testing requirements.txt
-                 "setup.py",
-                 "pyproject.tml",
-                 "setup.cfg",
-                 "tox.ini" # Tested should be on various environemnt
+                 "init_setup.sh",# basic environ set up
+                "requirements.txt",# Production requirement txt
+                "requirements_dev.txt",# developer and Testing requirements.txt
+                "setup.py",
+                "pyproject.toml",
+                'setup.cfg',
+                "tox.ini"# Tested should be on various environemnt
 ]
 
 
@@ -44,14 +44,10 @@ for filepath in list_of_files:
         os.makedirs(filedir, exist_ok=True)
         logging.info(f"creating dir at {filedir} for file : {filename}")
 
-        # if file path is not present or fiepath present but file size is 0 
-        if (not os.path.exists(filepath)) or  (os.path.getsize(filepath) == 0):
-            with open(filepath,'w') as f:
-                pass
-            logging.info(f"creating new file {filename} at path {filepath}")
-        else:
-            logging.info(f"File Already Exists at {filepath}")
-    
-
-
-
+    # if file path is not present or fiepath present but file size is 0 
+    if (not os.path.exists(filepath)) or (os.path.getsize(filepath) == 0):
+        with open(filepath, "w") as f:
+            pass
+            logging.info(f"Creating a new file: {filename} at path: {filepath}")
+    else:
+        logging.info(f"file is already present at: {filepath}")
