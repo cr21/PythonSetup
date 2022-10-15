@@ -1,7 +1,5 @@
 ipywidgets
 notebook
 ensure
-numpy
-pandas
-requests
 mypy
+-e . # check for setup.py and try to install local packages
