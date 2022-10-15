@@ -1,4 +1,3 @@
-from numpy import where
 import setuptools
 
 with open("README.md", 'r',encoding='utf-8') as f:
@@ -24,7 +23,7 @@ setuptools.setup(
         "Bug Tracker": f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues",
     },
     package_dir={"":"src"},
-    packages=setuptools.find_packages(where="src")(where="src") # find packages in src directory
+    packages=setuptools.find_packages(where="src") # find packages in src directory
 
     )
     
