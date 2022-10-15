@@ -1,0 +1,11 @@
+ipywidgets
+notebook
+ensure
+numpy
+pandas
+requests
+
+# dev requirements
+
+pytest
+mypy
