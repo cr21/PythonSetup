@@ -9,3 +9,4 @@ requests
 
 pytest
 mypy
+-e . # check for setup.py and try to install local packages
